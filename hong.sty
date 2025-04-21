@@ -1,0 +1,43 @@
+% hong.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hong}[2025/04/16 自定义文档信息宏包]
+% 封面、摘要、版权、致谢格式定义
+\makeatletter
+\def\paperType#1{\def\@paperType{#1}}\def\@paperType{}
+\def\ctitle#1{\def\@ctitle{#1}}\def\@ctitle{}
+\def\EnglishTitle#1{\def\@EnglishTitle{#1}}\def\@EnglishTitle{}
+\def\cdegree#1{\def\@cdegree{#1}}\def\@cdegree{}
+\def\caffil#1{\def\@caffil{#1}}\def\@caffil{}
+\def\csubject#1{\def\@csubject{#1}}\def\@csubject{}
+\def\cgrade#1{\def\@cgrade{#1}}\def\@cgrade{}
+\def\cauthor#1{\def\@cauthor{#1}}\def\@cauthor{}
+\def\cnumber#1{\def\@cnumber{#1}}\def\@cnumber{}
+\def\csupervisor#1{\def\@csupervisor{#1}}\def\@csupervisor{}
+\def\crank#1{\def\@crank{#1}}\def\@crank{}
+\def\cdate#1{\def\@cdate{#1}}\def\@cdate{}
+\long\def\cabstract#1{\long\def\@cabstract{#1}}\long\def\@cabstract{}
+\long\def\eabstract#1{\long\def\@eabstract{#1}}\long\def\@eabstract{}
+\def\ckeywords#1{\def\@ckeywords{#1}}\def\@ckeywords{}
+\def\ekeywords#1{\def\@ekeywords{#1}}\def\@ekeywords{}
+\def\cheading#1{\def\@cheading{#1}}\def\@cheading{}
+
+% 提供对外接口命令
+\def\getpaperType{\@paperType}
+\def\getctitle{\@ctitle}
+\def\getEnglishTitle{\@EnglishTitle}
+\def\getcdegree{\@cdegree}
+\def\getcaffil{\@caffil}
+\def\getcsubject{\@csubject}
+\def\getcgrade{\@cgrade}
+\def\getcauthor{\@cauthor}
+\def\getcnumber{\@cnumber}
+\def\getcsupervisor{\@csupervisor}
+\def\getcrank{\@crank}
+\def\getcdate{\@cdate}
+\def\getcabstract{\@cabstract}
+\def\geteabstract{\@eabstract}
+\def\getckeywords{\@ckeywords}
+\def\getekeywords{\@ekeywords}
+\def\getcheading{\@cheading}
+
+\makeatother

@@ -1,0 +1,120 @@
+\def\usewhat{xelatex}
+\documentclass[]{theme}
+                                                  
+% \usepackage{silence}
+% % 忽略所有警告（除了错误）
+% \WarningFilter{latex}{}{}
+
+\usepackage{lipsum}
+\usepackage{makecell}
+\usepackage{hong}
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+
+\paperType{本科毕业设计} % 你的论文是本科毕业设计 / 本科毕业论文
+\ctitle{你的论文标题}    
+\EnglishTitle{English Title}  
+\caffil{计算机工程学院} % 学院名称
+\csubject{计嵌1211}   % 专业名称
+\cauthor{你的名字}            % 学生姓名
+\cnumber{2000000000}        % 学生学号
+\csupervisor{蔡徐坤}        % 导师姓名
+\crank{院士}              % 导师职称
+\cdate{\the\year~年~\the\month~月~\the\day~日}
+
+
+% 开始全文
+\begin{document}                 
+
+%%%%%%%%%%   封面   %%%%%%%%%%
+\makecover
+%%%%%%%%%%   原创性声明和使用授权书   %%%%%%%%%%
+\makesm
+% %%%%%%%%%%   毕业设计中文摘要   %%%%%%%%%%
+\ChineseAbstract
+
+\textbf{摘\quad 要:}
+
+
+
+
+\textbf{关键词:} 关键词1;\quad  关键词2; \quad 关键词3; \quad  关键词4
+
+\newpage
+
+
+
+
+% %%%%%%%%%%   毕业设计外文摘要   %%%%%%%%%%
+% 1. 外文摘要用Times New Roman字体。
+% 2. 标题为四号加粗居中，缩放、间距、位置标准，无首行缩进，无左右缩进，且前空（四号）一行，段前、段后各0.5行间距，行间距为1.25倍多倍行距；
+% 3. “Abstract”“Keywords”两词为小四号加粗，顶格，“:”后空一英文字符空格；
+% 4. Abstract及Keywords部分的正文为小四号，不加粗，缩放、间距、位置标准，无左右缩进，无悬挂式缩进，段前、段后间距无，行间距为1.25倍多倍行距；
+% 5. Abstract部分正文在标题下空一行；
+% 6. Keywords部分正文在Abstract部分下空一行，各关键词之间用分号“;”隔开，尾部无标点。
+\EnglishAbstract{
+
+
+\noindent\textbf{Abstract:}  \lipsum[1]
+
+\noindent\textbf{Keywords:} 
+
+}
+\newpage
+
+
+
+% 去掉单个板材  带研究
+%% 多刀具移动和协同运行方法研究
+%多板材 
+% 物料切割经济模型研究
+%%%%%%%%%%   目录   %%%%%%%%%%
+\setcounter{page}{1}  
+\tableofcontents                                     % 中文目录
+\newpage
+
+\makeFBQD
+\newpage
+%%%%%%%%%  正文  %%%%%%%%%
+\section{绪论}
+\subsection{xxxx}
+\subsubsection{xxxx}
+
+
+
+\newpage
+%%%%%%%%%%  结论与展望  %%%%%%%%%%
+\section*{结论与展望}
+% 手动将标题添加到目录中
+\addcontentsline{toc}{section}{结论与展望}
+
+
+
+
+
+\newpage
+%%%%%%%%%%  致谢  %%%%%%%%%%
+\section*{致谢}
+\addcontentsline{toc}{section}{致谢}
+
+
+
+\newpage
+%%%%%%%%%%  参考文献  %%%%%%%%%%
+\begin{thebibliography}{99}
+
+\bibitem {deng} 邓建松，彭冉冉，陈长松. \LaTeX 科技排版指南 [M]. 北京：科学出版社，2001. 书号: 7 - 03 - 009239 - 2/TP.1516
+
+
+
+\end{thebibliography}
+
+
+
+
+% \section*{附录}
+% \addcontentsline{toc}{section}{附录}
+
+
+\end{document}                              
